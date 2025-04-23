@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "http://yorkapi.somee.com/*"
+  to = "https://yorkapi.somee.com/:splat"
+  status = 301
+  force = true
