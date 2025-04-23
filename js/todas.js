@@ -45,7 +45,7 @@ $(document).ready(function () {
   };
 
   // URL base de tu API (ajusta según tu configuración)
-  const apiBaseUrl = "https://localhost:7087/api/";
+  const apiBaseUrl = "https://yorkapi.somee.com/api/";
 
   // Función para inicializar una tabla
   function initDataTable(tableId, config) {
