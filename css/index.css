@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,15 +9,21 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
   display: flex;
-  height: 80vh;
-  width: 100vw;
+  flex-direction: column;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 h2 {
-  font-size: 20rem;
+  font-size: clamp(5rem, 15vw, 20rem); /* Tamaño fluido con límites */
   position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.2;
+  transition: font-size 0.3s ease; /* Transición suave para cambios */
 }
 
 .border {
@@ -65,18 +72,18 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 50px;
-  margin-top: 400px;
+  width: min(90%, 350px); /* Ancho fluido con máximo */
+  height: clamp(50px, 6vh, 60px); /* Altura fluida */
+  margin-top: min(60vh, 500px); /* Margen superior fluido */
   background: #141414;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Texto completamente fluido */
   font-weight: 500;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  transition: 0.3s ease all;
+  transition: all 0.3s ease;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -102,4 +109,34 @@ h2 {
 
 .boton.dos:hover::after {
   left: 0;
+}
+
+/* Media Queries con cambios más sutiles */
+@media (max-width: 1200px) {
+  h2 {
+    font-size: clamp(4rem, 12vw, 15rem);
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: clamp(3rem, 10vw, 12rem);
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .boton {
+    font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: clamp(2.5rem, 9vw, 10rem);
+  }
+
+  .boton {
+    height: clamp(45px, 5.5vh, 55px);
+    margin-top: min(55vh, 450px);
+  }
 }
