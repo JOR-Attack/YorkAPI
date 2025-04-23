@@ -93,7 +93,7 @@ function fetchData(endpoint) {
   const table = tableElement.DataTable({
     destroy: true,
     ajax: {
-      url: `https://localhost:7087/api/${endpoint}`,
+      url: `http://yorkapi.somee.com/api/${endpoint}`,
       dataSrc: "",
     },
     columns: getColumnsConfig(endpoint),
