@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.2/css/dataTables.bulma.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>DataTable</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titulo-container">
+        <div id="regresar" class="btn-navs"><span>Regresar</span></div>
+        <div class="text-animation text-center">York - API REST</div>
+        <div id="todas" class="btn-navs"><span>Ver todas</span></div>
+      </div>
+
+      <div class="tabss">
+        <div class="tab active" onclick="openTab(event, 'categorias')">
+          Categorías
+        </div>
+        <div class="tab" onclick="openTab(event, 'productos')">Productos</div>
+        <div class="tab" onclick="openTab(event, 'clientes')">Clientes</div>
+        <div class="tab" onclick="openTab(event, 'ordenes')">Órdenes</div>
+        <div class="tab" onclick="openTab(event, 'detalles')">Detalles</div>
+      </div>
+
+      <div class="tab-content active" id="categorias">
+        <table
+          id="categoriasTable"
+          class="display table table-striped table-bordered"
+          style="width: 70%"
+        ></table>
+      </div>
+
+      <div class="tab-content" id="productos">
+        <table
+          id="productosTable"
+          class="display table table-striped table-bordered"
+          style="width: 70%"
+        ></table>
+      </div>
+
+      <div class="tab-content" id="clientes">
+        <table
+          id="clientesTable"
+          class="display table table-striped table-bordered"
+          style="width: 70%"
+        ></table>
+      </div>
+
+      <div class="tab-content" id="ordenes">
+        <table
+          id="ordenesTable"
+          class="display table table-striped table-bordered"
+          style="width: 70%"
+        ></table>
+      </div>
+
+      <div class="tab-content" id="detalles">
+        <table
+          id="detallesTable"
+          class="display table table-striped table-bordered"
+          style="width: 70%"
+        ></table>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bulma.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

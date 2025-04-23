@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css"
+    />
+    <link rel="stylesheet" href="../css/todas.css" />
+
+    <title>Tablas</title>
+  </head>
+  <body class="body-gradient">
+    <div class="container-welcome">
+      <div class="barra_superior">
+        <div class="contenedor-boton">
+          <button class="boton seis" id="regresar">
+            <span>Regresar</span>
+            <svg>
+              <rect x="0" y="0" fill="none"></rect>
+            </svg>
+          </button>
+        </div>
+        <h1>Tablas</h1>
+        <div class="contenedor-vacio"></div>
+        <!-- Elemento vacío para balancear -->
+      </div>
+
+      <div class="table-section">
+        <h1>Categorias</h1>
+        <table id="categorias" class="display" style="width: 100%"></table>
+      </div>
+
+      <div class="table-section">
+        <h1>Productos</h1>
+        <table id="productos" class="display" style="width: 100%"></table>
+      </div>
+
+      <div class="table-section">
+        <h1>Clientes</h1>
+        <table id="clientes" class="display" style="width: 100%"></table>
+      </div>
+
+      <div class="table-section">
+        <h1>Órdenes</h1>
+        <table id="ordenes" class="display" style="width: 100%"></table>
+      </div>
+
+      <div class="table-section">
+        <h1>Detalles</h1>
+        <table id="detalles" class="display" style="width: 100%"></table>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.jqueryui.js"></script>
+
+    <script src="../js/todas.js"></script>
+  </body>
+</html>
