@@ -28,14 +28,29 @@
         <div id="todas" class="btn-navs"><span>Ver todas</span></div>
       </div>
 
-      <div class="tabss">
-        <div class="tab active" onclick="openTab(event, 'categorias')">
-          Categorías
+      <div class="nav-container">
+        <div class="tabss">
+          <div class="tab active" onclick="openTab(event, 'categorias')">
+            Categorías
+          </div>
+          <div class="tab" onclick="openTab(event, 'productos')">Productos</div>
+          <div class="tab" onclick="openTab(event, 'clientes')">Clientes</div>
+          <div class="tab" onclick="openTab(event, 'ordenes')">Órdenes</div>
+          <div class="tab" onclick="openTab(event, 'detalles')">Detalles</div>
         </div>
-        <div class="tab" onclick="openTab(event, 'productos')">Productos</div>
-        <div class="tab" onclick="openTab(event, 'clientes')">Clientes</div>
-        <div class="tab" onclick="openTab(event, 'ordenes')">Órdenes</div>
-        <div class="tab" onclick="openTab(event, 'detalles')">Detalles</div>
+
+        <!-- Botones de acción flotantes -->
+        <div class="action-buttons">
+          <button
+            class="button is-primary is-rounded"
+            onclick="showCreateForm()"
+          >
+            <span class="icon">
+              <i class="fa fa-plus"></i>
+            </span>
+            <span>Nuevo</span>
+          </button>
+        </div>
       </div>
 
       <div class="tab-content active" id="categorias">
@@ -76,6 +91,33 @@
           class="display table table-striped table-bordered"
           style="width: 70%"
         ></table>
+      </div>
+    </div>
+
+    <!-- Agrega esto dentro del <body>, preferiblemente al final antes de los scripts -->
+    <!-- Modal para formularios CRUD -->
+    <div id="crudModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title" id="modalTitle">Nuevo Registro</p>
+          <button
+            class="delete"
+            aria-label="close"
+            onclick="closeModal()"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="crudForm">
+            <!-- Los campos se generarán dinámicamente según la entidad -->
+          </form>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" onclick="submitForm()">
+            Guardar
+          </button>
+          <button class="button" onclick="closeModal()">Cancelar</button>
+        </footer>
       </div>
     </div>
 
